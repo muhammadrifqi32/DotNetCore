@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20191219081008_addmodeluser")]
+    [Migration("20191223083303_addmodeluser")]
     partial class addmodeluser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,7 +26,7 @@ namespace Data.Migrations
 
                     b.Property<DateTimeOffset>("CreateDate");
 
-                    b.Property<DateTimeOffset>("DeleteDate");
+                    b.Property<DateTimeOffset?>("DeleteDate");
 
                     b.Property<string>("Email");
 
@@ -34,7 +34,7 @@ namespace Data.Migrations
 
                     b.Property<string>("Password");
 
-                    b.Property<DateTimeOffset>("UpdateDate");
+                    b.Property<DateTimeOffset?>("UpdateDate");
 
                     b.Property<string>("Username");
 

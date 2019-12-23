@@ -12,6 +12,8 @@ namespace Data.Context
     {
         private readonly IServiceProvider _serviceProvider;
         public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Department> Departments { get; set; }
 
         public MyContext() { }
 

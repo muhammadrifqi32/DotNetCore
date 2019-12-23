@@ -8,16 +8,22 @@ namespace Data.Model
 {
     public class User : BaseModel
     {
-        public string Username { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
+        public Role Role { get; set; }
+        public Department Department { get; set; }
+        public User Manager { get; set; }
+
         public User()
         {
 
         }
         public User(UserVM userVM)
         {
-            this.Username = userVM.Username;
+            this.FirstName = userVM.FirstName;
+            this.LastName = userVM.LastName;
             this.Email = userVM.Email;
             this.Password = userVM.Password;
             this.CreateDate = DateTimeOffset.Now;
@@ -25,7 +31,8 @@ namespace Data.Model
         }
         public void Update(UserVM userVM)
         {
-            this.Username = userVM.Username;
+            this.FirstName = userVM.FirstName;
+            this.LastName = userVM.LastName;
             this.Email = userVM.Email;
             this.Password = userVM.Password;
             this.UpdateDate = DateTimeOffset.Now;

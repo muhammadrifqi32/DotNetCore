@@ -37,7 +37,7 @@ namespace Data.Repository
         public User Get(UserVM userVM)
         {
             //return myContext.Users.Where(u => u.Username == userVM.Username && u.Password == userVM.Password && u.IsDelete == false).FirstOrDefault();
-            return myContext.Users.FromSql($"call SP_CheckLogin({userVM.Username},{userVM.Password})").SingleOrDefault();
+            return myContext.Users.FromSql($"call SP_UserLogin({userVM.Email},{userVM.Password})").SingleOrDefault();
         }
 
         public int Update(int Id, UserVM userVM)

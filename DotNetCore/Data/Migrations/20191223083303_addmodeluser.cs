@@ -16,8 +16,8 @@ namespace Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IsDelete = table.Column<bool>(nullable: false),
                     CreateDate = table.Column<DateTimeOffset>(nullable: false),
-                    UpdateDate = table.Column<DateTimeOffset>(nullable: false),
-                    DeleteDate = table.Column<DateTimeOffset>(nullable: false),
+                    UpdateDate = table.Column<DateTimeOffset>(nullable: true),
+                    DeleteDate = table.Column<DateTimeOffset>(nullable: true),
                     Username = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Password = table.Column<string>(nullable: true)

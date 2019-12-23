@@ -111,7 +111,7 @@ namespace Client.Controllers
         //}
 
         // GET: Users
-        public ActionResult Dashboard(int Id, string Username, string Password)
+        public ActionResult Dashboard(int Id, string Email, string Password)
         {
             return View();
         }
